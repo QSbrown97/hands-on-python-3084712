@@ -20,3 +20,7 @@ for laureate in laureates:
     if laureate["surname"] == "Einstein":
         pprint(laureate)
         break
+
+for laureate in laureates:
+    if laureate["category"] == "physics":
+        pprint(laureate)

@@ -25,3 +25,14 @@ for laureate in laureates:
         born_date = datetime.strptime(laureate["born"], "%Y-%m-%d")
         print("age", year_date.year - born_date.year)
         break
+
+for laureate in laureates:
+    if laureate["surname"] == "Wien":
+        pprint(laureate)
+        print("==========")
+        year_date = datetime.strptime(laureate["year"], "%Y")
+        born_date = datetime.strptime(laureate["born"], "%Y-%m-%d")
+        print("age", year_date.year - born_date.year)
+        break
+else:
+    print("Laureate not found")
