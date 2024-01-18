@@ -3,9 +3,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+Fruits = ["Apple", "Orange", "Kiwi", "Banana"]
+
 @app.route("/")
 def hello():
-  return "Hello World!"
+  return f'My favorite fruit is an {Fruits[1]}'
 
-if __name__ == "__main__":
-  app.run(debug=True)
+app.run(debug=True)
